@@ -3,17 +3,120 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Features from '../components/Features.astro';
-import Testimonials from '../components/Testimonials.astro';
 import Newsletter from '../components/Newsletter.astro';
 import Footer from '../components/Footer.astro';
+import PricingCmp from '../components/Pricing.astro';
 ---
 
-<Layout title="Sassify - Your Ultimate SasS Template">
+<Layout title="Finnest - Your Ultimate Business Solution">
   <Header />
   <main>
     <Hero />
     <Features />
-    <Testimonials />
+    <section class="py-16 bg-white dark:bg-gray-800">
+      <div class="container-custom">
+        <!-- Case Study 1 -->
+        <div class="mb-24">
+          <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 font-medium text-sm mb-4">
+                Pelajar SMA
+              </span>
+              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Bagaimana Dita Meningkatkan Literasi Finansialnya dalam 3 Bulan</h2>
+              <p class="text-gray-600 dark:text-gray-300 mb-6">
+                Dita, siswi kelas 11 di Jakarta, menggunakan Finnest untuk memahami konsep dasar keuangan, seperti pengelolaan uang saku, tabungan, dan budgeting. Dalam 3 bulan, Dita berhasil menyusun rencana keuangan pribadi dan menabung lebih dari yang ia bayangkan sebelumnya.
+              </p>
+              <div class="flex flex-wrap gap-4 mb-6">
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2">...</svg>
+                  <span class="text-gray-700 dark:text-gray-300">85% Peningkatan Skor Kuis</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2">...</svg>
+                  <span class="text-gray-700 dark:text-gray-300">Rp150.000 Tertabung dalam 3 Bulan</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2">...</svg>
+                  <span class="text-gray-700 dark:text-gray-300">100% Partisipasi Modul</span>
+                </div>
+              </div>
+              <a href="#" class="btn-primary">Baca Studi Kasus Lengkap</a>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-xl">
+              <img src="/images/case-1.png" alt="Dashboard Finnest" class="w-full h-auto" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="mb-24">
+          <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+            <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+              <img src="/images/case-2.png" alt="Tim Edukasi Kampus" class="w-full h-auto" />
+            </div>
+            <div class="order-1 md:order-2">
+              <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 font-medium text-sm mb-4">
+                Mahasiswa
+              </span>
+              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Kisah Sukses UKM Kampus dalam Menyusun Program Edukasi Finansial</h2>
+              <p class="text-gray-600 dark:text-gray-300 mb-6">
+                UKM Edukasi dari Universitas Indonesia memanfaatkan Finnest untuk menyelenggarakan program literasi keuangan bagi anggotanya. Dalam waktu singkat, mereka berhasil menjangkau lebih dari 300 peserta dan meningkatkan kesadaran finansial secara kolektif.
+              </p>
+              <div class="flex flex-wrap gap-4 mb-6">
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2">...</svg>
+                  <span class="text-gray-700 dark:text-gray-300">300+ Peserta Aktif</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2">...</svg>
+                  <span class="text-gray-700 dark:text-gray-300">Skor Kelas Naik 40%</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2">...</svg>
+                  <span class="text-gray-700 dark:text-gray-300">Topik Disukai: Investasi & Dana Darurat</span>
+                </div>
+              </div>
+              <a href="#" class="btn-primary">Baca Studi Kasus Lengkap</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div>
+          <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 font-medium text-sm mb-4">
+                Program Sekolah
+              </span>
+              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Kolaborasi Sekolah X Finnest: Membangun Generasi Melek Finansial</h2>
+              <p class="text-gray-600 dark:text-gray-300 mb-6">
+                Sebuah SMA di Bandung bermitra dengan Finnest untuk mengintegrasikan kurikulum edukasi keuangan ke dalam pelajaran PKN dan Ekonomi. Dalam satu semester, siswa menunjukkan peningkatan drastis dalam kemampuan menyusun anggaran dan membuat keputusan finansial cerdas.
+              </p>
+              <div class="flex flex-wrap gap-4 mb-6">
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2">...</svg>
+                  <span class="text-gray-700 dark:text-gray-300">60% Efisiensi Belajar</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2">...</svg>
+                  <span class="text-gray-700 dark:text-gray-300">Integrasi Kurikulum Nasional</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2">...</svg>
+                  <span class="text-gray-700 dark:text-gray-300">Selesai dalam 1 Semester</span>
+                </div>
+              </div>
+              <a href="#" class="btn-primary">Baca Studi Kasus Lengkap</a>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-xl">
+              <img src="/images/case-3.png" alt="Platform Pendidikan Finnest" class="w-full h-auto" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <PricingCmp />
     <Newsletter />
   </main>
   <Footer />

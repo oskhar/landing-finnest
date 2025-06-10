@@ -4,61 +4,61 @@
   <div class="container-custom max-w-4xl">
     <div class="card p-8 md:p-12 border border-gray-200 dark:border-gray-700">
       <div class="text-center mb-8">
-        <h2 class="mb-4 text-gray-900 dark:text-white">Stay Updated</h2>
+        <h2 class="mb-4 text-gray-900 dark:text-white">Tetap Terhubung dengan Finnest</h2>
         <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Subscribe to our newsletter to receive the latest updates, tips, and exclusive offers.
+          Daftarkan emailmu untuk mendapatkan tips keuangan pribadi, update fitur baru, dan akses penawaran eksklusif dari Finnest.
         </p>
       </div>
-      
+
       <form class="max-w-xl mx-auto" x-data="{ email: '', submitted: false, error: '' }">
         <div class="relative" x-show="!submitted">
           <div class="flex flex-col sm:flex-row gap-4">
             <div class="grow">
-              <label for="email" class="sr-only">Email address</label>
-              <input 
-                type="email" 
-                id="email" 
+              <label for="email" class="sr-only">Alamat email</label>
+              <input
+                type="email"
+                id="email"
                 x-model="email"
-                placeholder="Enter your email" 
+                placeholder="Masukkan email kamu"
                 class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
                 required
               />
               <p class="text-red-500 text-sm mt-1" x-show="error" x-text="error"></p>
             </div>
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               class="btn-primary whitespace-nowrap"
               x-on:click.prevent="
                 if (!email) {
-                  error = 'Please enter your email';
+                  error = 'Email wajib diisi';
                   return;
                 }
                 if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                  error = 'Please enter a valid email';
+                  error = 'Format email tidak valid';
                   return;
                 }
                 error = '';
                 submitted = true;
               "
             >
-              Subscribe Now
+              Langganan Sekarang
             </button>
           </div>
         </div>
-        
+
         <div class="text-center p-6 bg-primary-50 dark:bg-primary-900/30 rounded-lg" x-show="submitted" x-cloak>
           <svg class="w-12 h-12 text-primary-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Thank You for Subscribing!</h3>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Terima Kasih Telah Berlangganan!</h3>
           <p class="text-gray-600 dark:text-gray-300">
-            You've been added to our newsletter. We'll keep you updated with the latest news and offers.
+            Kamu sekarang terdaftar dalam newsletter Finnest. Kami akan kirimkan info terbaru, tips keuangan, dan penawaran eksklusif langsung ke emailmu.
           </p>
         </div>
       </form>
-      
+
       <div class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
-        By subscribing, you agree to our <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">Privacy Policy</a> and <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">Terms of Service</a>.
+        Dengan berlangganan, kamu menyetujui <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">Kebijakan Privasi</a> dan <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">Syarat & Ketentuan</a> kami.
       </div>
     </div>
   </div>
